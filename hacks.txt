@@ -1,0 +1,4 @@
+
+find all hidden files in <directory>:
+
+find <directory> -maxdepth 1 -regex .*/\\..*
