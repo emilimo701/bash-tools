@@ -15,7 +15,6 @@ git config --global color.diff auto
 
 alias ubls='`which ls`'
 alias oldll='ubls --classify -l --human-readable'
-alias ls='ubls --color=auto'
 alias l='ubls --color=auto --classify --almost-all'
 alias ll='ubls --color=auto --classify --almost-all -l -g --no-group'
 alias lll='ubls --color=auto --classify --all -l --size'
