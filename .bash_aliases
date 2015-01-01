@@ -16,8 +16,8 @@ git config --global color.diff auto
 alias ubls='`which ls`'
 alias oldll='ubls --classify -l --human-readable'
 alias l='ubls --color=auto --classify --almost-all'
-alias ll='ubls --color=auto --classify --almost-all -l -g --no-group'
-alias lll='ubls --color=auto --classify --all -l --size'
+alias ll='ubls --color=auto --classify --almost-all --human-readable -g -o'
+alias lll='ubls --color=auto --classify -l --all --size'
 
 alias pvt='./pvt.exe -f data/aug08.data -e data/aug08.txt -b data/aug08.dat -n -d 321817'
 
