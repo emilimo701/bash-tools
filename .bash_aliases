@@ -28,3 +28,4 @@ alias xampp='cd /cygdrive/c/xampp/htdocs'
 alias cve='cd /cygdrive/c/xampp/htdocs/cve-hm-site'
 alias cvex=/cygdrive/c/xampp/htdocs/jhemilian/cve-hm-site
 alias clr=clear
+alias kill1='kill -15 %1 ; jobs ; jobs ; jobs'
