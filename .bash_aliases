@@ -27,3 +27,4 @@ alias jgrep='grep --color=auto --binary-files=without-match --no-messages --line
 alias xampp='cd /cygdrive/c/xampp/htdocs'
 alias cve='cd /cygdrive/c/xampp/htdocs/cve-hm-site'
 alias cvex=/cygdrive/c/xampp/htdocs/jhemilian/cve-hm-site
+alias clr=clear
