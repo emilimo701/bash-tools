@@ -13,7 +13,7 @@ alias pem2pkcs='openssl pkcs12 -export'
 git config --global color.status auto
 git config --global color.diff auto
 
-alias ubls='/usr/bin/ls'
+alias ubls='`which ls`'
 alias oldll='ubls --classify -l --human-readable'
 alias ls='ubls --color=auto'
 alias l='ubls --color=auto --classify --almost-all'
