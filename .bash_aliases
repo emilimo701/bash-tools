@@ -22,9 +22,11 @@ alias lll='ubls --color=auto --classify -l --all --size'
 alias pvt='./pvt.exe -f data/aug08.data -e data/aug08.txt -b data/aug08.dat -n -d 321817'
 
 alias jgrep='grep --color=auto --binary-files=without-match --no-messages --line-number --extended-regexp --ignore-case --directories=recurse --only-matching --max-count=1'
+alias wgetall='wget --no-cache --recursive --no-parent --page-requisites --no-host-directories --no-http-keep-alive --no-verbose'
 
 alias xampp='cd /cygdrive/c/xampp/htdocs'
 alias cve='cd /cygdrive/c/xampp/htdocs/cve-hm-site'
 alias cvex=/cygdrive/c/xampp/htdocs/jhemilian/cve-hm-site
 alias clr=clear
+alias cve='cd /cygdrive/c/xampp/htdocs/jhemilian/cve-hm-site'
 alias kill1='kill -15 %1 ; jobs ; jobs ; jobs'
