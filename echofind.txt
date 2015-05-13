@@ -1,0 +1,38 @@
+echo "find -maxdepth 3 -regextype posix-egrep -iregex ""\".*<regexp>\""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+echo -e "find -maxdepth 3 -regextype posix-egrep -iregex \".*<regexp>\" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+alias ekko='echo "find -maxdepth 3 -regextype posix-egrep -iregex ""\".*<regexp>\""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"'
+alias eggo='echo -e "find -maxdepth 3 -regextype posix-egrep -iregex \".*<regexp>\" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"'
+
+echo "echo ""\"""find -maxdepth 3 -regextype posix-egrep -iregex """"\".*<regexp>\""""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]\""
+(useless) output:
+echo "find -maxdepth 3 -regextype posix-egrep -iregex ".*<regexp>" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+-----------
+echo "echo -e ""\"""find -maxdepth 3 -regextype posix-egrep -iregex ""\".*<regexp>\""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]\""
+(useless) output:
+echo -e "find -maxdepth 3 -regextype posix-egrep -iregex ".*<regexp>" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+
+
+echo "echo ""\"""find -maxdepth 3 -regextype posix-egrep -iregex """"\".*<regexp>\""""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]\""
+(useless) output:
+echo "find -maxdepth 3 -regextype posix-egrep -iregex ".*<regexp>" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+------------
+echo "echo -e ""\"""find -maxdepth 3 -regextype posix-egrep -iregex ""\".*<regexp>\""" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]\""
+(useless) output:
+echo -e "find -maxdepth 3 -regextype posix-egrep -iregex ".*<regexp>" [<tests>...] [-xtype f|d|c|l|b|p|s] [<moretests>...]"
+
+
+
+
+echo -e 'find -maxdepth 3 -regextype posix-egrep -iregex \x22\x2e\x2a\x3c\x00regexp\x3e'\
+'\x22\x00 \x5b\x3c\x00tests\x3e\x2e\x2e\x2e\x5d\x00 \x5b\x00-xtype f\x7c\x00d\x7c\x00c\x7c\x00'\
+'l\x7c\x00b\x7c\x00p\x7c\x00s\x5d\x00 \x5b\x3c\x00cmoretests\x3e\x2e\x2e\x2e\x5d\x00 ; ';;
+
+echo -e 'find -maxdepth 3 -regextype posix-egrep -iregex \x22\x2e\x2a\x3c\x00regexp\x3e\x22\x00 \x5b\x3c\x00tests\x3e\x2e\x2e\x2e\x5d\x00 \x5b\x00-xtype f\x7c\x00d\x7c\x00c\x7c\x00l\x7c\x00b\x7c\x00p\x7c\x00s\x5d\x00 \x5b\x3c\x00cmoretests\x3e\x2e\x2e\x2e\x5d\x00 ; ';;
+
+echo -e "find -maxdepth 3 -regextype posix-egrep -iregex \x22\x2e\x2a\x3c\x00regexp\x3e"\
+"\x22\x00 \x5b\x3c\x00tests\x3e\x2e\x2e\x2e\x5d\x00 \x5b\x00-xtype f\x7c\x00d\x7c\x00c\x7c\x00"\
+"l\x7c\x00b\x7c\x00p\x7c\x00s\x5d\x00 \x5b\x3c\x00cmoretests\x3e\x2e\x2e\x2e\x5d\x00 ; ";;
+
+echo -e "find -maxdepth 3 -regextype posix-egrep -iregex \x22\x2e\x2a\x3c\x00regexp\x3e"\
+"\x22\x00 \x5b\x3c\x00tests\x3e\x2e\x2e\x2e\x5d\x00 \x5b\x00-xtype f\x7c\x00d\x7c\x00c\x7c\x00"\
+"l\x7c\x00b\x7c\x00p\x7c\x00s\x5d\x00 \x5b\x3c\x00cmoretests\x3e\x2e\x2e\x2e\x5d\x00 ; ";;

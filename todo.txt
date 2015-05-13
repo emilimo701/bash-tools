@@ -1,0 +1,106 @@
+744-
+745:       -type  Supported.   POSIX specifies `b', `c', `d', `l', `p', `f' and `s'.  GNU find also supports `D', representing a Door, where the OS provides these.
+746-
+747-
+ 24157817 = 73 x 149 x 2221
+ 39088169 = 37 x 113 x 9349
+ 63245986 = 2 x 233 x 135721
+
+136 : 11825896447871834976429068427 = 3 x 7 x 67 x 1597 x 3571 x 63443 x 23230657239121
+137 : 19134702400093278081449423917
+      1.618 033 988749 894 848 204586834
+	  
+	  expand/collapse all
+	  lightbox
+	  .json format
+	  col-xs-# ... etc
+	  
+Adding a remote repository where you have SSH access
+	$ git remote add thistle ssh://$<remote_username>@<domain>/<path_to>/<reponame>.git
+	e.g. ...
+	$ git remote add thistle ssh://$jhemilian@thistle/jhemilian/cve-hm-site.git
+
+	  
+	  
+	  git checkout -b <branchname> --track (startpoint possible without --track)
+	  
+	  
+	  git branch --track <branchname> (startpoint possible)
+	  
+	  first push of a branch <new-local-branch-name> to set upstream tracking branch as <remote-name> <new-local-branch-name>
+	  git push -u <remote-name> <new-local-branch-name>
+	  
+	  
+	  New branch set upstream remote (public) tracking branch:
+		git checkout -b <newbranchname>
+		or
+		git branch <newbranchname> ; git checkout <newbranchname>
+		so that you are now on the new branch.
+		then:
+		git push -u <remote> <newbranchname>
+	  
+	  
+	  Delete (local) remote tracking branch(es):
+		git branch -d -r <remote>/<branchname>...
+		e.g.:
+		git branch -d -r origin/test55 origin/experiment89 origin/toomuchcoffee
+	  
+	  Delete (public) remote tracking branch(es) permanently:
+		git push <remote> --delete <branchname>...
+		e.g.:
+		git push origin --delete test55 experiment89 toomuchcoffee
+		
+		
+		Set up `push <repository>` (e.g. `push origin`) to push all branches:
+	$ git config --local --add remote.<repository>.push 'refs/heads/*:refs/heads/*'
+	$ git config --local --add remote.<repository>.push 'refs/tags/*:refs/tags/*'
+		alternatively:
+		just do this every push...
+	git push <repository> :
+		e.g.
+	git push origin :
+		from the manpages, " The special refspec : (or +: to allow non-fast-forward updates) directs Git to push "matching" branches: for every branch that exists on the local side, the remote side is updated if a branch of the same name already exists on the remote side."
+		
+		
+		
+
+
+Loop through all of certain files in directory:
+	e.g., all .png files...
+	$ find . -name '*.png' -exec echo {} \;
+	where the FIRST occurence of empty {}-braces substitutes the match (filename)
+	more info:
+	$ man --pager=cat find | grep --color=auto -n -B 1 -A 5 '\-exec[^a-zA-Z]'
+	also, alternatives:
+	(from above man output): "
+	 find . -type f -exec file '{}' \;
+         Runs `file' on every file in or below the current directory.  Notice that the braces are enclosed in single quote marks to protect them from interpretation as shell script punctuation.  The semicolon is similarly protected by the use of a backslash, though single quotes could have been used in that case also.
+	"
+	So this is preferred... (?)... yeah:
+	$ find . -name '*.png' -exec echo '{}' \;
+	or
+	$ find . -name '*.png' -exec echo '{}' ';'
+	
+	
+Delete all <name>.pl.png files that have been copied and renamed with the first dot (.) striped, e.g. <name>pl.png, with user prompt confirming each deletion:
+	find . -name '*[^.]pl.png' -ok rm '{}' ';'
+
+from wiki.bash-hackers.org/internals/shell_options#parser_configurations:
+"You have to configure the parser before a line with new syntax is parsed:"
+	$ shopt -s extglob    # standalone - CORRECT way! THEN....
+	$ echo (*.txt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
