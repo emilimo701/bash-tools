@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git config --global color.status auto
+git config --global color.diff auto
+
+return 0;
