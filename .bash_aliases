@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias gitadd='git status ; git add -A ; echo ; git status'
 alias gitbranch='git branch -av --color'
 alias gitdiff='git diff --name-status --patience --ignore-space-change'
@@ -28,3 +30,8 @@ alias cve='cd /cygdrive/c/xampp/htdocs/cve-hm-site'
 alias cvex=/cygdrive/c/xampp/htdocs/jhemilian/cve-hm-site
 alias clr=clear
 alias kill1='kill -15 %1 ; jobs ; jobs ; jobs'
+
+alias rsoo='pkill -USR1 redshift'
+alias checkrs='ps -A | egrep "(\sredshift)|(\sPID\s)"'
+
+return 0;
