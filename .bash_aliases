@@ -15,9 +15,6 @@ alias gitcurrbranch='git branch | grep -o "\*.*$" | grep -o "\w*$"'
 
 alias pem2pkcs='openssl pkcs12 -export'
 
-git config --global color.status auto
-git config --global color.diff auto
-
 alias ubls='`which ls`'
 alias oldll='ubls --classify -l --human-readable'
 alias l='ubls --color=auto --classify --almost-all'
