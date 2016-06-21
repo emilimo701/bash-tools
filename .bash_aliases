@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias calc='(gcalctool &>/dev/null&)'
 alias aliasfile='echo $(echo $(f1le=`find ~ -maxdepth 2 -path "*/*bash*tools*/*bash*ali*ses*"` && [[ -f $f1le ]] && [[ -w $f1le ]] && echo $f1le))'
 alias realias='source `aliasfile`'
 
